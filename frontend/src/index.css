@@ -1,0 +1,52 @@
+/* ===== Reset พื้นฐาน: ให้กินเต็มจอ และไม่จำกัดความกว้าง #root ===== */
+html, body, #root {
+  height: 100%;
+}
+#root {
+  max-width: none;   /* เอา max-width ของเทมเพลต Vite ออก */
+  margin: 0;
+  padding: 0;        /* เอา padding เริ่มต้นของ Vite ออก */
+}
+
+/* ใช้โหมด light เป็นหลัก (กันตัวอักษรขาวบนพื้นมืดของ template เดิม) */
+:root {
+  color-scheme: light;
+}
+
+/* body ไม่ใช้ flex อีกต่อไป เพื่อไม่ให้ไปรบกวน .app-shell */
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  display: block;      /* สำคัญ: เอา flex + place-items ของ Vite ออก */
+  background: #ffffff; /* หรือ #f8f9fa ถ้าอยากเทาอ่อน */
+  color: #213547;
+}
+
+/* สไตล์ทั่วไปจาก template — คงไว้ได้ */
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: none;
+}
+a:hover { color: #535bf2; }
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #f9f9f9; /* ใช้โทนสว่าง */
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover { border-color: #646cff; }
+button:focus,
+button:focus-visible { outline: 4px auto -webkit-focus-ring-color; }
