@@ -28,6 +28,7 @@ $id     = $body['id']     ?? null;
 $fname  = trim($body['fname']  ?? '');
 $lname  = trim($body['lname']  ?? '');
 $email  = trim($body['email']  ?? '');
+$password = trim($body['password'] ??'');
 $avatar = trim($body['avatar'] ?? '');
 
 /* ตรวจข้อมูลพื้นฐาน */
